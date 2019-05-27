@@ -16,7 +16,7 @@ export default function EditChar(){
 							<option value="Elven">Elven</option>
 							<option value="Orc">Orc</option>
 							<option value="Dwarf">Dwarf</option>
-							<option value="Hobbit">Hobbit</option>
+							<option value="Halfling">Halfling</option>
 							<option Value="Dryad">Dryad</option>
 							<option value="Centaur">Centaur</option>
 							<option value="Giant">Giant</option>
