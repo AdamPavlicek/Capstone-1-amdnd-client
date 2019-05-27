@@ -1,0 +1,29 @@
+.container{
+	position:relative;
+	top: 80px;
+}
+#charListTitle{
+  text-align: center
+}
+.charCard{
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  margin-right: 5px;
+  margin-top: 5px;
+  border: 1px solid black;
+  padding:5px
+}
+.editButton,.viewButton{
+  padding: 3px;
+}
+.editButton{
+  position: absolute;
+  right: 5px;
+  top: 5px; 
+}
+.viewButton{
+  position: absolute;
+  right: 41px;
+  top: 5px; 
+}

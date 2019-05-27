@@ -1,0 +1,25 @@
+.registerContainer{
+  position: relative;
+  margin: auto;
+  width: 50%;
+  top: 80px;
+  border: 2px solid black;
+  padding: 5px;
+}
+label{
+	display: block;
+	text-align: center;
+	margin-top: 2px;
+}
+#email, #userName, #password, #passwordRepeat{
+  display: block;
+  margin: auto;
+  width: 150px;
+}
+#registerSubmit{
+  display: block;
+  margin: auto;
+  margin-top: 3px;
+  width: 65px;
+  padding:3px;
+}

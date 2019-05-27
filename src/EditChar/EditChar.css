@@ -1,0 +1,53 @@
+.charContainer{
+	position: relative;
+	top: 100px;
+}
+.basicsContainer{
+	position:relative;
+	display: block;
+	border: 1px solid black;
+}
+.statsContainer{
+	font-size: 30px;
+	border: 1px solid black;
+	text-align: center;
+}
+.stats{
+	position: relative;
+	display: inline-block;
+	border: 1px solid black;
+	font-size: 18px;
+	text-align: left;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.stat{
+	display: relative;
+	width: 40px;
+	text-align: center;
+	margin-right: 2px;
+}
+.textAreaContainer{
+	display: inline;
+}
+.textContain{
+	display: inline-block;
+	text-align: center;
+}
+.equip,.biop{
+	display: block;
+}
+textarea{
+	width: 250px;
+	height: 300px;
+}
+#updateButton{
+	position: relative;
+	display: block;
+	margin-top: 10px;
+	padding: 5px;
+	font-size: 35px;
+}

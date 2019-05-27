@@ -1,0 +1,25 @@
+.loginContainer{
+  position: relative;
+  margin: auto;
+  width: 40%;
+  top: 80px;
+  border: 1px solid black;
+}
+label{
+	display: block;
+	text-align: center;
+	margin-top: 2px;
+}
+#userName, #password{
+  display: block;
+  margin: auto;
+  width: 150px;
+} 
+#loginSubmit{
+  display: block;
+  margin: auto;
+  margin-top: 3px;
+	margin-bottom: 3px;
+  width: 50px;
+  padding: 3px;
+}
