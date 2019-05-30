@@ -1,4 +1,5 @@
 import React from 'react';
+import './EditChar.css'
 
 export default function EditChar(){
   return (
@@ -54,12 +55,10 @@ export default function EditChar(){
 								<input type='number' id='charisma' className='stat' placeholder='10' />
 							</li>
 						</ul>
-					<!-- the modifyers should auto calculate based on the stat number -->
 						<ul className='stats'>
 							<li>
 								<label htmlFor='strMod'>Strength Mod: </label>
 								<input type='number' id='strMod' className='stat' /> 
-							<!-- Mod value is equal to (stat-10)/2 -->
 							</li>
 							<li>
 								<label htmlFor='dexMod'>Dexterity Mod: </label>

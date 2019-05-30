@@ -1,0 +1,12 @@
+.homeContainer{
+  position: relative;
+  top: 100px;
+  text-align: center;
+}
+#entryWelcome{
+  margin: auto;
+  width: 300px;
+  height: auto;
+  padding: 1%;
+  border: 1px solid black;
+}

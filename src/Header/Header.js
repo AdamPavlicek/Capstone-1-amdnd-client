@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import './Header.css';
 
 export default function Header(){
   return (
@@ -9,7 +10,10 @@ export default function Header(){
           AMDND
         </NavLink>
         <NavLink to ='/register' activeClassName='selected'>
-        <button>Register</button>
+          <button>Register</button>
+        </NavLink>
+        <NavLink to='/Login' activeClassName='selected'>
+          <button>Login</button>
         </NavLink>
       </nav>
     </div>

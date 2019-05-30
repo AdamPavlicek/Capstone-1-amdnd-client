@@ -5,17 +5,18 @@ import Home from '../Home/Home';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
 import CharList from '../CharList/CharList';
-import NewChar from '../NewChar';
+import EditChar from '../EditChar/EditChar';
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route path='/register' component={Register}/>
+        <Route exact path='/' component={Home} />
+        <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />
-        <Route path='/:user' component={CharList} />
+        <Route path='/charlist' component={CharList} />
+        <Route path='/editchar' component={EditChar} />
       </Switch>
     </BrowserRouter>
   );
