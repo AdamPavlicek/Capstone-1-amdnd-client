@@ -1,9 +1,13 @@
-.container{
+.charactersContainer{
 	position:relative;
 	top: 80px;
 }
 #charListTitle{
   text-align: center
+}
+.charListContainer{
+  max-width: 700px; ;
+  margin: auto;
 }
 .charCard{
   position: relative;
@@ -11,6 +15,7 @@
   margin: auto;
   margin-right: 5px;
   margin-top: 5px;
+  width: 200px;
   border: 1px solid black;
   padding:5px
 }

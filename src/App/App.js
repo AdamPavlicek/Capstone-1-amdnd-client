@@ -16,7 +16,7 @@ function App() {
         <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />
         <Route path='/charlist' component={CharList} />
-        <Route path='/editchar' component={EditChar} />
+        <Route path='/editchar/:user_id' component={EditChar} />
       </Switch>
     </BrowserRouter>
   );
