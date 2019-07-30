@@ -2,17 +2,15 @@ import React from 'react';
 import './EditChar.css'
 
 export default function EditChar() {
-
-
 	return (
 		<div className='charContainer'>
-			<h1 id='newCharTitle'>New Character form</h1>
+			<h1 id='newCharTitle'>Edit Character form</h1>
 			<form>
 				<div className='basicsContainer'>
 					<label htmlFor='charName'>Name: </label>
 					<input type='text' id='charName' placeholder='steve' />
 					<label htmlFor='charRace'>Race: </label>
-					<select>
+					<select id='raceSelect'>
 						<option value=''>choose</option>
 						<option value="Human">Human</option>
 						<option value="Elven">Elven</option>
@@ -89,7 +87,7 @@ export default function EditChar() {
 						<textarea id='charEquipment' className='equip'></textarea>
 					</div>
 					<div className='textContain'>
-						<label htmlFor='bio' className='biop'><h4>Bio</h4></label>
+						<label htmlFor='bio' className='biop'><h4>Background</h4></label>
 						<textarea id='bio' className='biop'></textarea>
 					</div>
 				</div>

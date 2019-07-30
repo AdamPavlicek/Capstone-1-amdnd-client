@@ -7,7 +7,7 @@ export default function CharList() {
   const [charData, setCharData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/charList')
+    fetch('http://localhost:8000/api/charList/')
       .then(res => {
         return res.json()
       }).then(data => {
@@ -35,7 +35,7 @@ export default function CharList() {
                 <li>Cha Mod: {Math.floor((char.char_charisma - 10) / 2)}</li>
               </ul>
               <button className='viewButton'>View</button>
-              <Link to='/editchar'>
+              <Link to='/editchar/:char_id'>
                 <button className='editButton'>Edit</button>
               </Link>
             </li>)))
