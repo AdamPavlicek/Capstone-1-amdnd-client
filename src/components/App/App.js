@@ -1,14 +1,17 @@
-import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Header from '../../Header/Header';
+import React, {Component} from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Header from '../Header/Header';
 import Home from '../Home/Home';
-import RegisterRoute from './routes/RegisterRoute/RegisterRoute';
+import RegisterRoute from '../../routes/RegisterRoute/RegisterRoute';
 import LoginRoute from '../../routes/LoginRoute/LoginRoute';
 import CharList from '../CharList/CharList';
 import NewChar from '../NewChar/NewChar';
 import EditChar from '../EditChar/EditChar';
 
-function App() {
+class App extends Component {
+
+  
+  render () {
   return (
     <BrowserRouter>
       <nav>
@@ -24,6 +27,7 @@ function App() {
       </Switch>
     </BrowserRouter>
   );
+}
 }
 
 export default App;

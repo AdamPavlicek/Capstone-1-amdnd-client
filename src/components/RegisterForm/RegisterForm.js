@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Input } from '../../utils/FormUtils/FormUtils';
-import './Register.css';
+import './RegisterForm.css';
 
 export default function RegisterForm() {
   const [name, setName] = useState('')

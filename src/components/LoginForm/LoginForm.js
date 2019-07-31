@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Input} from '../../utils/FormUtils'
+import {Input} from '../../utils/FormUtils/FormUtils'
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
 
