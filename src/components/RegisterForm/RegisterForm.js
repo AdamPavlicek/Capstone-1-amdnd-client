@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AuthApiService from '../../services/auth-api-service'
 import { Input } from '../../utils/FormUtils/FormUtils';
 import './RegisterForm.css';
 
