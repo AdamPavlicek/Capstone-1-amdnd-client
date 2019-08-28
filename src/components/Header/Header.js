@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import './Header.css';
 import TokenService from '../../services/token-service';
+import './Header.css';
 
 export default function Header() {
   const [loggedIn, setLoggedIn] = useState(false)
@@ -12,8 +12,6 @@ export default function Header() {
     }
     setLoggedIn(false)
     TokenService.hasAuthToken() ? setLoggedIn(true): setLoggedIn(false);
-
-
   
   },[])
 

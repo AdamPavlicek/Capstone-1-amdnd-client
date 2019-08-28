@@ -2,8 +2,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  max-width: 250px;
+  max-width: 300px;
   margin: auto;
   border: 1px solid black;
+  font-size: 20px;
+}
+.char-health-boundry{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#charRace, #charName-input{
+  max-width: 250px;
+  font-size: 20px;
+}
+option{
   font-size: 20px;
 }

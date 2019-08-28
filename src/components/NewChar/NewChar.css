@@ -1,24 +1,24 @@
 .charContainer{
 	display: flex;
 	flex-direction: column;
+	justify-content: space-evenly;
 	max-width: 1000px;
 	margin: auto;
 }
-
 .textAreaContainer{
-	display: inline;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 .textContain{
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
 	text-align: center;
 }
-.equip,.biop{
-	display: block;
+.textArea-label{
+	font-size: 25px;
 }
-textarea{
-	width: 250px;
-	height: 300px;
-}
+
 #submitButton{
 	position: relative;
 	display: block;

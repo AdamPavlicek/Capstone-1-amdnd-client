@@ -14,29 +14,33 @@ export default function NewChar() {
   })
 
   return (
-      <div className='charContainer'>
-        <form id='new-char-form'>
+    <div className='charContainer'>
+      <form id='new-char-form'>
+        <div className='char-inputs'>
           <CharBasicsInput />
           <StatsInput />
-          <div className='textAreaContainer'>
-            <div className='textContain'>
-              <Label htmlFor='charEquipment' className='equip'><h4>Equipment/Items</h4></Label>
-              <Textarea 
-                id='charEquipment' 
-                className='equip' 
-              />
-            </div>
-            <div className='textContain'>
-              <Label htmlFor='bio' className='biop'><h4>Bio</h4></Label>
-              <Textarea 
-                onChange={e => setBio(e.target.value)}
-                id='bio' 
-                htmlFor='biop' 
-              />
-            </div>
+        </div>
+        <div className='textAreaContainer'>
+          <div className='textContain'>
+            <Label htmlFor='charEquipment' className='textArea-label'><h4>Equipment/Items</h4></Label>
+            <Textarea
+              id='charEquipment'
+              className='equip'
+            />
           </div>
-          <button type='submit' id='submitButton'>Submit</button>
-        </form>
-      </div>
+          <div className='textContain'>
+            <Label htmlFor='bio' className='textArea-label'><h4>Bio</h4></Label>
+            <Textarea
+              onChange={e => setBio(e.target.value)}
+              id='bio'
+            />
+          </div>
+          <div>
+            <Label><h4></h4></Label>
+          </div>
+        </div>
+        <button type='submit' id='submitButton'>Submit</button>
+      </form>
+    </div>
   )
 }

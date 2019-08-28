@@ -17,9 +17,12 @@ export default function CharBasicsInput() {
         placeholder='Character name'
         aria-label='character name'
         required />
-      <Label htmlFor='charRace'>Race: </Label>
-      <select id='raceSelect' onChange={e => setRace(e.target.value)} >
-        <option value=''>choose</option>
+      <select
+        id='charRace'
+        onChange={e => setRace(e.target.value)}
+        required
+      >
+        <option value=''>Choose Race...</option>
         <option value="Human">Human</option>
         <option value="Elven">Elven</option>
         <option value="Orc">Orc</option>
@@ -31,14 +34,18 @@ export default function CharBasicsInput() {
         <option value="Mramor">Mramor</option>
         <option value="Icarian">Icarian</option>
       </select>
-      <Label htmlFor='charHealth'>Health: </Label>
-      <Input
-        onChange={e => setHealth(e.target.value)}
-        type='number'
-        id='charHealth'
-        name='charHealth'
-        required
-      />
+      <div className='char-health-boundry'>
+        <Label htmlFor='charHealth'>Health: </Label>
+        <Input
+          onChange={e => setHealth(e.target.value)}
+          type='number'
+          id='charHealth'
+          name='charHealth'
+          placeholder='health'
+          required
+        />
+      </div>
+
     </div>
   )
 

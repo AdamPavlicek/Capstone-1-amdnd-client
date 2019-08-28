@@ -3,3 +3,11 @@ input, select, option {
   width: 100%;
   margin: 5px;
 }
+
+textarea{
+	width: 320px;
+	height: 400px;
+	resize: none;
+	overflow-y: auto;
+	font-size: 20px;
+}
