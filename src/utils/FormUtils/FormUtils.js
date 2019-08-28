@@ -23,6 +23,6 @@ export function Required({ className, ...props }) {
 
 export function Textarea({ className, ...props }) {
   return (
-    <textarea className={className} {...props} />
+    <textarea rows='10' className={className} {...props} />
   )
 }

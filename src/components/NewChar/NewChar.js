@@ -20,7 +20,7 @@ export default function NewChar() {
           <CharBasicsInput />
           <StatsInput />
         </div>
-        <div className='textAreaContainer'>
+        <div className='textArea-containers'>
           <div className='textContain'>
             <Label htmlFor='charEquipment' className='textArea-label'><h4>Equipment/Items</h4></Label>
             <Textarea
@@ -36,7 +36,10 @@ export default function NewChar() {
             />
           </div>
           <div>
-            <Label><h4></h4></Label>
+            <Label htmlFor='placeholder' className='textArea-label'><h4>Placeholder</h4></Label>
+            <Textarea
+              id='placeholder'  
+            />
           </div>
         </div>
         <button type='submit' id='submitButton'>Submit</button>

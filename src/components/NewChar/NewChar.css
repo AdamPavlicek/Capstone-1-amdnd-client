@@ -5,7 +5,7 @@
 	max-width: 1000px;
 	margin: auto;
 }
-.textAreaContainer{
+.textArea-containers{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
