@@ -2,23 +2,25 @@ import React, { useState, useEffect } from 'react';
 import { Input, Label, Textarea } from '../../utils/FormUtils/FormUtils';
 import StatsInput from '../StatsInput/StatsInput'
 import CharBasicsInput from '../CharBasicsInput/CharBasicsInput';
+import CharSkills from '../CharSkills/CharSkills'
 import './NewChar.css';
 
 export default function NewChar() {
   const [items, setItems] = useState('')
   const [bio, setBio] = useState('')
-  const [abilities, setAbilities] = useState({
-    name: '',
-    damage: '',
-    description: '',
-  })
-
+  
   return (
     <div className='charContainer'>
       <form id='new-char-form'>
         <div className='char-inputs'>
           <CharBasicsInput />
           <StatsInput />
+        </div>
+        <div className='skills-and-abilities'>
+          <div>
+            <h4>Abilities and Skills</h4>
+            <CharSkills />
+          </div>
         </div>
         <div className='textArea-containers'>
           <div className='textContain'>
@@ -42,6 +44,7 @@ export default function NewChar() {
             />
           </div>
         </div>
+        
         <button type='submit' id='submitButton'>Submit</button>
       </form>
     </div>

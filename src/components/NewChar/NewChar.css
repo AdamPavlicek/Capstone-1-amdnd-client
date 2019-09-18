@@ -13,7 +13,6 @@
 .textContain{
 	display: flex;
 	flex-direction: column;
-	text-align: center;
 }
 .textArea-label{
 	font-size: 25px;
@@ -26,3 +25,8 @@
 	padding: 5px;
 	font-size: 35px;
 }
+/* .skills-and-abilities{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+} */

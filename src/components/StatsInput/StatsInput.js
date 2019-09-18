@@ -84,17 +84,17 @@ export default function StatsInput() {
         </div>
         <div className='stats'>
 
-          <p id='strMod'>Strength Mod <span className='statMod'>{Math.floor((strength - 10) / 2)}</span></p>
+          <p id='strMod'>Strength Mod: <span className='statMod'>{Math.floor((strength - 10) / 2)}</span></p>
 
-          <p id='strMod'>Dexterity Mod <span className='statMod'>{Math.floor((dexterity - 10) / 2)}</span></p>
+          <p id='strMod'>Dexterity Mod: <span className='statMod'>{Math.floor((dexterity - 10) / 2)}</span></p>
 
-          <p id='conMod'>Constitution Mod <span className='statMod'>{Math.floor((constitution - 10) / 2)}</span></p>
+          <p id='conMod'>Constitution Mod: <span className='statMod'>{Math.floor((constitution - 10) / 2)}</span></p>
 
-          <p id='intMod'>Inteligence Mod <span className='statMod'>{Math.floor((inteligence - 10) / 2)}</span></p>
+          <p id='intMod'>Inteligence Mod: <span className='statMod'>{Math.floor((inteligence - 10) / 2)}</span></p>
 
-          <p id='wisMod'>Wisdom Mod <span className='statMod'>{Math.floor((wisdom - 10) / 2)}</span></p>
+          <p id='wisMod'>Wisdom Mod: <span className='statMod'>{Math.floor((wisdom - 10) / 2)}</span></p>
 
-          <p id='chaMod'>Charisma Mod <span className='statMod'>{Math.floor((charisma - 10) / 2)}</span></p>
+          <p id='chaMod'>Charisma Mod: <span className='statMod'>{Math.floor((charisma - 10) / 2)}</span></p>
 
         </div>
       </div>

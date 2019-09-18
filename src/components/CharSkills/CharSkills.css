@@ -1,0 +1,54 @@
+.abilities-skills-and-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 20px;
+  max-width: 250px;
+  font-size: 16px;
+}
+.skill-input-wrapper{
+ display: flex;
+ flex-direction: column; 
+ justify-content: center;
+ border: 1px solid black;
+ padding: 5px 5px;
+}
+#add-skill-name{
+  max-width: 230px;
+}
+#add-skill-description{
+  max-width: 230px;
+  max-height: 150px;
+}
+#add-skill-button{
+  max-width: 240px;
+}
+.skill-list{
+  border: 1px solid black;
+  max-width: 230px;
+  overflow-wrap: break-word;
+  padding: 5px;
+}
+.skill-name{
+  font-size: 20px;
+}
+.skill-description{
+  max-width: 230px;
+
+}
+
+.remove-skill{
+  border: 1px solid black;
+  color: white;
+  background-color: black;
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+.remove-skill:hover{
+  color: red;
+  border-color: red;
+}
+li.skill{
+  list-style-type: none;
+}
+
