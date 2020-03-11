@@ -1,29 +1,56 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import TokenService from '../../services/token-service';
+import UserContext from '../../Context/UserContext';
 import './Header.css';
 
 export default function Header() {
-  const [loggedIn, setLoggedIn] = useState(false)
+  const userContext = useContext(UserContext)
 
-  useEffect(() => {
-    const handleLogoutClick = () => {
-      TokenService.clearAuthToken();
-    }
-    setLoggedIn(false)
-    TokenService.hasAuthToken() ? setLoggedIn(true): setLoggedIn(false);
-  
-  },[])
+  const renderLoginLink = () => {
+    return (
+      <div className='not_logged_in'>
+        <NavLink to='/register' className='header-link'>
+          Register
+        </NavLink>
+        <NavLink to='/login' className='header-link'>
+          Login
+        </NavLink>
+      </div>
+    )
+  }
+
+  const handleLogout = () => {
+    TokenService.clearAuthToken()
+    userContext.processLogout()
+  }
+
+  const renderLogoutLink = () => {
+    return (
+      <div className='logged_in'>
+        <NavLink to='/' onClick={handleLogout}>
+          <span className='header-link'>Logout</span>
+        </NavLink>
+      </div>
+    )
+  }
 
   return (
-    <div className='headerContian'>
-      <NavLink to='/' activeClassName='selected'>
-        AMDND
-          </NavLink>
-      <NavLink to='/register' activeClassName='selected'>
-        <button>Register</button>
-      </NavLink>
-    </div>
+    <header className='header'>
+      <h2 className='header_brand'>
+        <NavLink to='/' activeClassName='selected'>
+          AMDND
+        </NavLink>
+      </h2>
+      <nav className='header_nav'>
+        <NavLink to='rules' className='rules-link'>How To Play</NavLink>
+        {/* <p className='rules-divider'>  </p> */}
+        {TokenService.hasAuthToken()
+          ? renderLogoutLink()
+          : renderLoginLink()
+        }
+      </nav>
+    </header>
   )
 }
 

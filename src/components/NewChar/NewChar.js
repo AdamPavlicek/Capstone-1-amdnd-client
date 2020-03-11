@@ -3,33 +3,37 @@ import { Input, Label, Textarea } from '../../utils/FormUtils/FormUtils';
 import StatsInput from '../StatsInput/StatsInput'
 import CharBasicsInput from '../CharBasicsInput/CharBasicsInput';
 import CharSkills from '../CharSkills/CharSkills'
+import CharEquipment from '../CharEquipment/CharEquipment';
+import CharItems from '../CharItems/CharItems';
+import CharAbilities from '../CharAbilities/CharAbilities';
 import './NewChar.css';
 
 export default function NewChar() {
   const [items, setItems] = useState('')
   const [bio, setBio] = useState('')
-  
+  const [charBasics, setCharBasics] = useState([])
+  const [charStats, setCharStats] = useState([])
+
+  const handleSubmitChar = () => {
+
+  }
+
   return (
     <div className='charContainer'>
       <form id='new-char-form'>
         <div className='char-inputs'>
           <CharBasicsInput />
-          <StatsInput />
-        </div>
-        <div className='skills-and-abilities'>
-          <div>
-            <h4>Abilities and Skills</h4>
-            <CharSkills />
+          <div id='stats-skills-abilities-wrapper'>
+            <StatsInput />
+              <CharAbilities 
+                />
+              <CharSkills />
           </div>
         </div>
+
         <div className='textArea-containers'>
-          <div className='textContain'>
-            <Label htmlFor='charEquipment' className='textArea-label'><h4>Equipment/Items</h4></Label>
-            <Textarea
-              id='charEquipment'
-              className='equip'
-            />
-          </div>
+          <CharEquipment />
+          <CharItems />
           <div className='textContain'>
             <Label htmlFor='bio' className='textArea-label'><h4>Bio</h4></Label>
             <Textarea
@@ -37,14 +41,7 @@ export default function NewChar() {
               id='bio'
             />
           </div>
-          <div>
-            <Label htmlFor='placeholder' className='textArea-label'><h4>Placeholder</h4></Label>
-            <Textarea
-              id='placeholder'  
-            />
-          </div>
         </div>
-        
         <button type='submit' id='submitButton'>Submit</button>
       </form>
     </div>

@@ -1,0 +1,10 @@
+#ability_list_container{
+  text-align: center;
+}
+.ability_type_container{
+  text-align: left;
+  margin: 10px;
+}
+.ability-list-item{
+  list-style-type: disc;
+}

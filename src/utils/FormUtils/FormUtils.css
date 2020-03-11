@@ -1,13 +1,21 @@
 input, select, option {
+  width: fit-content;
   font-size: 20px;
   width: 100%;
   margin: 5px;
+  font-family: 'Lato', sans-serif;
 }
 
 textarea{
-	width: 320px;
-	height: 400px;
+	width: 263px;
 	resize: none;
 	overflow-y: auto;
-	font-size: 20px;
+  font-size:inherit;
+  font-family: 'Lato', sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

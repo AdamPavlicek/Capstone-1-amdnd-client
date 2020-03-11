@@ -1,4 +1,4 @@
-#char_skills_wrapper{
+#items_container{
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -6,10 +6,10 @@
   padding: 5px;
   max-width: auto;
 }
-#add-skill-name{
+#add_item_name{
   margin-left: 0%;
 }
-ul#list-skills{
+ul#list_items{
   width: 270px;
   overflow-wrap: break-word;
   border: 1px solid var(--black);
@@ -18,15 +18,14 @@ ul#list-skills{
   margin: 2px;
   text-align: left;
 }
-.skill-name{
-  margin: 0%;
-}
-.skill-description{
-  margin: 7px;
-}
-
-li.skill{
+li.item{
   list-style-type: none;
   border-bottom: 1px solid var(--black);
   padding: 5px;
+}
+.item_name{
+  margin: 0%;
+}
+.item_description{
+  margin: 7px;
 }

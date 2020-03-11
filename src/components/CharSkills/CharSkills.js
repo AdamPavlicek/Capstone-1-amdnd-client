@@ -3,20 +3,37 @@ import { Input, Textarea } from '../../utils/FormUtils/FormUtils';
 import './CharSkills.css';
 
 export default function CharSkills() {
-  const [skill, setSkill] = useState({
-    skillName: '',
-    skillDescription: ''
-  })
+  const [skillName, setSkillName] = useState('')
+  const [skillDesc, setSkillDesc] = useState('')
   const [skills, setSkills,] = useState([])
   const [addingSkill, setAddingSkill] = useState(false)
+  const [nameError, setNameError] = useState(false)
+  const [descError, setDescError] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
 
   const handleNewSkill = () => {
-    if (skill === { skillName: '', skillDescription: '' }) {
+    if (skillName === '') {
+      setNameError(true)
+      setDescError(false)
+      setErrorMessage('Skill needs Name')
       return;
     }
-    setAddingSkill(false)
+    else if (skillDesc === '') {
+      setDescError(true)
+      setNameError(false)
+      setErrorMessage('Skill needs Description')
+      return;
+    }
+    const skill = {
+      name: skillName,
+      description: skillDesc
+    }
     setSkills([...skills, skill])
-    setSkill('')
+    setNameError(false)
+    setDescError(false)
+    setAddingSkill(false)
+    setSkillName('')
+    setSkillDesc('')
   }
 
   const removeSkill = index => {
@@ -26,42 +43,35 @@ export default function CharSkills() {
   }
 
   return (
-    <div className='abilities-skills-and-more'>
+    <div id='char_skills_wrapper' >
       <h2>Skills</h2>
-      <div className='skill-list'>
-        <ul id='list-skills'>
-          {skills.map((skill, index) =>
-            <li className='skill' key={index}>
-              <h5 className='skill-name'>
-                {skill.skillName}
-              </h5>
-              <p className='skill-description'>
-                {skill.skillDescription}
-              </p>
-              <span className='remove-skill' onClick={() => removeSkill(index)}> Remove Skill </span>
-            </li>
-          )}
-        </ul>
-      </div>
+      <ul id='list-skills'>
+        {skills.map((skill, index) =>
+          <li className='skill' key={index}>
+            <h5 className='skill-name'>
+              {skill.name}
+            </h5>
+            <p className='skill-description'>
+              {skill.description}
+            </p>
+            <span className='remove-skill remove_index' onClick={() => removeSkill(index)}> X </span>
+          </li>
+        )}
+      </ul>
       {addingSkill ?
-        <div className='skill-input-wrapper'>
+        <div id='skill-input-wrapper' className='input_wrapper'>
+          {nameError ? <p className='skill-error-message error'>{errorMessage}</p> : <div></div>}
           <Input
-            onChange={e => setSkill({
-              skillName: e.target.value,
-              skillDescription: document.querySelector("#add-skill-description").value
-            })}
+            onChange={e => setSkillName(e.target.value)}
             type='text'
             id='add-skill-name'
             name='skillName'
             placeholder='Skill name'
             aria-label='Skill name'
           />
+          {descError ? <p className='skill-error-message error'>{errorMessage}</p> : <div></div>}
           <Textarea
-            onChange={e => setSkill(
-              {
-                skillName: document.querySelector("#add-skill-name").value,
-                skillDescription: e.target.value
-              })}
+            onChange={e => setSkillDesc(e.target.value)}
             type='text'
             id='add-skill-description'
             name='skillDescription'
@@ -69,9 +79,10 @@ export default function CharSkills() {
             aria-label='Skill Description'
           />
           <button id='add-skill-button' type='button' onClick={handleNewSkill}>Add Skill</button>
+          <button id='cancel-skill-add' type='button' onClick={() => setAddingSkill(false)}>Cancel</button>
         </div> : <div></div>
       }
-      <button type='button' onClick={() => setAddingSkill(true)}>New Skill</button>
+      <button type='button' className='button_char' onClick={() => setAddingSkill(true)}>Add Skill</button>
     </div>
   )
 }

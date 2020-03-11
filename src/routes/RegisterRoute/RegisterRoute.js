@@ -10,7 +10,7 @@ export default function RegisterRoute() {
   
   return (
     <div>
-      <h2>Login</h2>
+      <h2>Register</h2>
       <RegisterForm onRegisterSuccess={handleRegisterSuccess} />
     </div>
   )

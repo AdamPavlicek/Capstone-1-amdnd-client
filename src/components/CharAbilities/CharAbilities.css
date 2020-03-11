@@ -1,0 +1,63 @@
+#char_abilities_wrapper{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 2px;
+  padding: 5px;
+  max-width: auto;
+}
+#ability_name, #ability_type, #ability_cost, 
+#ability_damage_roll, #ability_damage_mod{
+  margin-left: 0%;
+}
+ul#list-abilities{
+  width: 270px;
+  overflow-wrap: break-word;
+  border: 1px solid var(--black);
+  border-radius: 3px;
+  padding: 5px;
+  margin: 2px;
+  text-align: left;
+}
+li.ability{
+  list-style: none;
+  /* border-bottom: 1px solid var(--black); */
+  padding: 5px;
+}
+.ability_header_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--black);
+}
+.ability_name{
+  margin: 0%;
+}
+.ability_buttons{
+  
+}
+
+.ability_description, .ability_damage, .ability_cost{
+  margin: 7px;
+}
+.ability_damage, .ability_cost{
+  text-align: center;
+}
+
+#ability_type_wrapper, #ability_damage_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.ability_dropdowns{
+  width: fit-content;
+}
+.ability_details_wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.span_identifier{
+  display: block;
+  font-weight: bold;
+  font-size: 23px;
+}

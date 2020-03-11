@@ -28,7 +28,7 @@ export default function LoginForm() {
     <div className='loginContainer'>
       <form className='entryform' onSubmit={handleSubmit} >
         <Input 
-          onChange={e => setUserName=(e.target.value)}
+          onChange={e => setUserName(e.target.value)}
           id='login-username-input'
           type='text'
           name='username'
@@ -45,14 +45,6 @@ export default function LoginForm() {
           aria-label='password'
           required
         />
-       
-        <label htmlFor='login_password'>Password: </label>
-        <input 
-          id='login_password' 
-          name='password'
-          type='password' 
-          placeholder='Enter Password' 
-          required />
         <button type="submit">LOGIN</button>
       </form>
     </div>

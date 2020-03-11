@@ -1,0 +1,52 @@
+#how-to-play-page{
+  display:flex;
+  flex-direction: column;
+  margin: 20px;
+}
+#rules-anchor, #ability-anchor, #skill-anchor {
+  padding-top: 50px;
+  margin-top: -50px;
+  
+}
+#anchor-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  background-color: var(--black);
+  margin-bottom: 38px;
+  padding: 5px;
+}
+a.anchor{
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
+  font-size: 20px;
+  border: 1px solid var(--secondary);
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+a.anchor:hover{
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--primary);
+  border-width: 2px;
+  text-decoration: none;
+}
+.how-to-play-sections{
+  text-align: center;
+}
+
+/* These are used in the Rules, AbilityList, and SkillList */
+
+.list-item-name{
+  font-weight: bold;
+  text-decoration: underline;
+}
+.list-tier1, .list-tier2{
+  list-style-type: none;
+}

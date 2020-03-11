@@ -1,35 +1,34 @@
 .charactersContainer{
-	position:relative;
+  display: flex;
 	top: 80px;
 }
-#charListTitle{
-  text-align: center
-}
 .charListContainer{
+  display: flex;
+  justify-content: space-evenly;
   max-width: 700px; ;
   margin: auto;
   /* overflow: auto; */
 }
 .charCard{
-  position: relative;
-  display: inline-block;
-  margin: auto;
-  margin-right: 5px;
-  margin-top: 5px;
-  width: 200px;
+  display: flex;
+  flex-direction: column;
   border: 1px solid black;
   padding:5px
+}
+.char_status{
+  display: flex;
+  flex-direction: row;
+  
+}
+.char_info{
+  margin: 2px;
 }
 .editButton,.viewButton{
   padding: 3px;
 }
 .editButton{
-  position: absolute;
-  right: 5px;
-  top: 5px; 
+  max-width: 75px;
 }
 .viewButton{
-  position: absolute;
-  right: 41px;
-  top: 5px; 
+ max-width: 75px;
 }
